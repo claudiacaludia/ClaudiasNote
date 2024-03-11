@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Notizenapplikation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&family=Poppins:wght@300&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/addTags.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+<div>
+    <p id="application_name" class="text-center">Claudias Notes</p>
+</div>
+
+<div id="beforeContent">
+    <div></div>
+    <div id="openPopup" class="d-flex rounded">
+        <button type="button" class="btn btn_round stretched-link rounded-circle">+</button>
+        <p>Add new note</p>
+    </div>
+    <div id="toggle">
+        <input type="checkbox" class="checkbox" id="themeToggle"/>
+        <label class="toggleBtn" for="themeToggle">
+            <i></i>
+            <i></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+
+</div>
+
+<!--Popup Feld -->
+<div id="addNotes_popup_field">
+    <form>
+        <fieldset>
+            <legend>Add new note</legend>
+            <div id="newNote_From">
+                <label for="newNote_Title">Title</label>
+                <input type="text" id="newNote_Title">
+
+                <label for="newNote_Date">Date</label>
+                <input type="date" id="newNote_Date">
+
+                <label for="newNote_Text">Note</label>
+                <textarea name="freetext" rows="4" cols="40" id="newNote_Text"></textarea>
+
+                <label>Priority</label>
+                <div id="priority">
+                    <input type="radio" id="low" name="priority" value="low" checked>
+                    <label for="low">low</label>
+                    <input type="radio" id="middle" name="priority" value="middle">
+                    <label for="middle">middle</label>
+                    <input type="radio" id="high" name="priority" value="high">
+                    <label for="high">high</label><br>
+                </div>
+                <label>Tags</label>
+                <div id="tagsBox">
+                    <form>
+                        <input type="text" id="newNote_Tags" placeholder="tag" autocomplete="off"/>
+                        <button class="btn btn-secondary" id="addTagBtn">Add Tag</button>
+                    </form>
+                    <div id="tagField"></div>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <button id="addNote" type="submit" class="btn">Save</button>
+    <button id="closePopup" type="button" class="btn">Close</button>
+</div>
+
+<div id="content" class="container-fluid container">
+    <div id="notes_overview" class="col-lg-6 col-sm-12">
+        <ul class="list-unstyled">
+            <!----------------------------hier sind die Tabs ------------------------>
+            <div class="tabs">
+                <input type="radio" class="tabs_radio" name="notes" id="allNotes" checked>
+                <label for="allNotes" class="tabs_label">Notes</label>
+                <div class="tabs_content">
+                    <div class="d-flex justify-content-center">
+                        <button id="sortNotes" class="btn btn-primary m-3 w-100" type="button" aria-expanded="false">
+                            Sort by priority
+                        </button>
+                    </div>
+                    <div id="notesDiv">
+                    </div>
+
+                </div>
+                <input type="radio" class="tabs_radio" name="notes" id="archivedNotes">
+                <label for="archivedNotes" class="tabs_label">Archive</label>
+                <div class="tabs_content">
+                    <div id="archiveDiv">
+
+                    </div>
+
+                </div>
+                <input type="radio" class="tabs_radio" name="notes" id="tagsOverview">
+                <label for="tagsOverview" class="tabs_label">Tags</label>
+                <div class="tabs_content">
+                    <div id="allTags">
+                        <div class="all_notes">tag</div>
+                        <div class="all_notes">tag</div>
+                        <div class="all_notes">tag</div>
+                        <div class="all_notes">tag</div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <div id="note_detail" class="col-md-6 col-sm-12 row">
+        <ul class="list-unstyled">
+            <li>
+                <p class="text-end mt-3 p-15">
+                    <button id="editNote" class="btn btn-secondary">edit</button>
+                    <button id="deleteNote" class="btn btn-secondary">delete</button>
+                    <button id="archiveNote" class="btn btn-secondary">archive</button>
+                    <button id="reactivateNote" class="btn btn-secondary">reactivate</button>
+
+                </p>
+                <div id="note_detail_change">
+                    <h1 id="noteTitle">Please click on a note</h1>
+                    <p id="noteDate"></p>
+                    <p id="notePriority"></p>
+                    <hr>
+                    <p id="noteText"></p>
+                </div>
+                <button id="saveNoteChanges" class="btn btn-secondary d-none">save changes</button>
+
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

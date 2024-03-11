@@ -1,0 +1,103 @@
+/*Responsive */
+@media (max-width: 990px) { /*das bedeutet dass es max 800px erlaubt*/
+    .body{
+        display: block;
+    }
+
+    #note_detail{
+        order: 1;
+        width: 100%;
+        margin: 0;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 0px;
+
+    }
+    #notes_overview{
+        order: 2;
+        width: 100%;
+        margin: 0;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    #application_name{
+        font-size: 2.5rem;
+    }
+
+
+}
+@media (max-width: 900px) {
+    #tagField{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .second_line p{
+        font-size: 0.8rem;
+    }
+    #priority{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #newNote_Tags{
+        max-width: 100%;
+    }
+
+}
+@media (max-width: 620px) {
+    #tagsBox {
+       display: block;
+    }
+    #addTagBtn{
+        margin-bottom: 5px;
+    }
+
+}
+@media (max-width: 576px) {
+    #application_name{
+        font-size: 2rem;
+    }
+    .tabs_label {
+        font-size: 1.5rem;
+    }
+    .second_line p{
+        font-size: 0.6rem;
+    }
+    legend{
+        font-size: 1.9rem;
+    }
+    #openPopup>p{
+        font-size: 18px;
+    }
+    #beforeContent{
+        gap: 3px;
+    }
+
+
+}
+@media (max-width: 436px) {
+    .tabs_label {
+        font-size: 1.2rem;
+    }
+    .btn-secondary{
+        font-size: 0.8rem;
+        padding: 4px 7px 4px 7px;
+    }
+    legend{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .tabs_label {
+        font-size: 1.2rem;
+    }
+    .btn-secondary{
+        font-size: 0.65rem;
+    }
+}
+
+

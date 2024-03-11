@@ -1,0 +1,59 @@
+{
+  "noteID" : 0,
+  "notes" : [
+    {
+      "id": 1,
+      "title": "Wish List",
+      "date": "2023-10-02",
+      "priority": "middle",
+      "text": "Books, Perfume, Cake, Sweets and Drinks",
+      "archived": false,
+      "tags": ["Books", "Wish"]
+    },
+    {
+      "id": 2,
+      "title": "Tattoo Idea",
+      "date": "2023-11-14",
+      "priority": "middle",
+      "text": "quotes, faeries, dragons, plants, moon, sun",
+      "archived": true,
+      "tags": ["Idea", "Tattoo"]
+    },
+    {
+      "id": 3,
+      "title": "Learning content of the semester",
+      "date": "2023-11-30",
+      "priority": "low",
+      "text": "Programming, Marketing, Data evaluation and validation, ...",
+      "archived": true,
+      "tags": ["FH", "Studying"]
+    },
+    {
+      "id": 4,
+      "title": "Meal Prep",
+      "date": "2023-12-15",
+      "priority": "high",
+      "text": "Monday: Chickpea and vegetable curry with brown rice.\nTuesday: Lentil soup with whole-grain bread.\nWednesday: Quinoa salad with mixed vegetables and lemon-tahini dressing.\nThursday: Stir-fried tofu with broccoli and bell peppers over noodles.\nFriday: Black bean and corn tacos with avocado and salsa on corn tortillas.",
+      "archived": false,
+      "tags": ["Cooking","Food"]
+    },
+    {
+      "id": 5,
+      "title": "Programming Shortcuts",
+      "date": "2024-02-13",
+      "priority": "middle",
+      "text": "Backslash: option + shift + 7\n  Geschwungende Klammer: option + 8/9\n | Linie: Option + 7\n System.out.println: sysou +control+ leerzeichen\n Einrückungen: Command + shift + f",
+      "archived": true,
+      "tags": ["FH","Coding","JS"]
+    },
+    {
+      "id": 6,
+      "title": "Movie Ranking",
+      "date": "2024-02-14",
+      "priority": "high",
+      "text": "13.1 The Beekeeper: Lukas: 6/10 Claudia: 5,5/10  21.1 Wo die Lüge hinfällt: Lukas: 7,5/10 Claudia: 6/10",
+      "archived": false,
+      "tags": ["Cinema", "Rating"]
+    }
+  ]
+}

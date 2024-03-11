@@ -1,0 +1,68 @@
+/* --------------------------tags-------------------------- */
+
+#tagsBox {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 3fr 100px;
+    gap: 10px;
+}
+
+
+#tagField {
+    min-height: 50px;
+    width: 100%;
+    border: 2px dashed var(--brown);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+#tagField p {
+    background-color:var(--brown);
+    color: var(--white);
+    padding: 3px 9px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+/*Styles for tab tag*/
+.adjustTag {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 12px 30px 2px 22px;
+    padding: 5px 20px 5px 20px;
+    background-color: var(--darkgreen);
+    border-radius: 5px;
+    width: 80%;
+    color: white;
+    justify-items: center;
+}
+
+.adjustTag button {
+    width: 50%;
+}
+.adjustTag p{
+    font-size: 1.7rem;
+}
+
+.deleteTag{
+    background-color: #d3655f;
+    border:1px solid #d3655f;
+}
+
+#allTags{
+    display: grid;
+    place-items: center;
+}
+
+#newNote_Tags{
+    max-width: 100%;
+}
+/* source that helped me implement the adding tags: https://codepen.io/mshahanwaz/pen/NWdzvZd*/

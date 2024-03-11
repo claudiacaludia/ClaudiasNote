@@ -1,0 +1,46 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.tabs_label {
+    padding: 10px 16px;
+    cursor: pointer;
+    color: white;
+    width: 33.33%;
+    font-family: 'Moirai One', system-ui;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.tabs_label:hover{
+    color: #A27B5C;
+}
+
+.tabs_radio {
+    display: none;
+}
+
+.tabs_content {
+    order: 1;
+    width: 100%;
+    display: none;
+
+}
+
+
+.tabs_radio:checked + .tabs_label { /* label from selected tap*/
+    font-weight: bold;
+    color: #A27B5C;
+    border-bottom: 2px solid #A27B5C;
+}
+
+
+.tabs_radio:checked + .tabs_label + .tabs_content {
+    display: initial;
+}
+
+/* source that helped me great tabs: https://www.youtube.com/watch?v=ghVn5VH9H4M*/
+

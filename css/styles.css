@@ -1,0 +1,252 @@
+:root{
+    --darkgreen: #2C3639;
+    --green: #475352;
+    --brown: #A27B5C;
+    --white: #eee9e4;
+}
+body{
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--darkgreen);
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+#application_name{
+    font-family: 'Moirai One', system-ui;
+    text-transform: uppercase;
+    font-size: 2.9rem;
+    padding: 35px 0 0 0;
+}
+
+h1{
+    color: var(--brown);
+}
+
+h2{
+    overflow: hidden; /* when Notetitle is to long it will be cut off*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 95%;
+}
+
+#beforeContent{
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.btn{
+    background-color: var(--brown);
+    border-color:var(--brown);
+    color:var(--white);
+    padding: 5px 8px 5px 8px;
+}
+.btn_round{
+    margin-right: 20px;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+}
+.btn:hover{
+    background-color: var(--darkgreen);
+    border: solid 1px white;
+
+}
+.btn_round:hover{
+    border-color: white;
+    background-color: var(--darkgreen);
+    color: white;
+}
+
+#openPopup{
+    align-items: baseline;
+    width: 250px;
+    position: relative; /* otherwise stretched link doesn't work */
+    justify-self: start;
+}
+
+#openPopup>p{
+    text-align: center;
+    color: var(--brown);
+    text-transform: uppercase;
+    font-size: 23px;
+
+}
+
+
+#addNotes_popup_field {
+    display: none;
+    position: fixed;
+    width: 60vw;
+    height: auto;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    background-color: var(--darkgreen);
+    padding: 20px 20px 20px 30px;
+    z-index: 9; /* to make sure it's in the foreground*/
+    color: white;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.62);
+}
+legend{
+    color: var(--brown);
+    font-family: 'Moirai One', system-ui;
+    font-size: 2.4rem;
+}
+input, select, textarea{
+    background-color: var(--darkgreen);;
+    color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    margin: 0 0 15px 0;
+}
+
+label{
+    font-size: 1.3rem;
+    color: white;
+}
+#priority > label{
+    margin-right: 50px;
+}
+
+#newNote_From{
+    display: flex;
+    flex-direction: column;
+}
+
+#content{
+    display:flex;
+    flex-direction: row;
+    width: 95%;
+    flex-wrap: wrap;
+}
+
+#notes_overview{
+    background-color: var(--green);
+    margin: 0 10px 0 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: -20px 20px 30px 10px rgba(0, 0, 0, 0.42);
+}
+
+#note_detail {
+    background-color: var(--white);
+    min-height: 50vh;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0 20px 20px 20px;
+    box-shadow: 20px 20px 30px 10px rgba(0, 0, 0, 0.42);
+}
+
+
+.all_notes{
+    margin: 12px 10px 2px 12px;
+    padding: 5px 20px 5px 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: solid 1px var(--white);
+    color: black;
+}
+
+
+.high_priority{
+    border-color: #d3655f;
+    border-width: 2px;
+}
+
+.middle_priority{
+    border-color: #dc8b3b;
+    border-width: 2px;
+}
+
+.low_priority{
+    border-color: #64af58;
+    border-width: 2px;
+}
+.focusedNote{
+    background-color: rgba(218, 213, 208, 0.87);
+}
+
+.second_line{
+    display: grid;
+    grid-template-columns: auto 5fr;
+    gap: 10px;
+    overflow-wrap: break-word;
+    justify-items: stretch;
+}
+
+
+.tag{
+    color: var(--white);
+    margin-left: 5px;
+    padding: 1px 10px 0px 10px;
+    font-size: 13px;
+    background-color: var(--darkgreen);
+    text-align: center;
+    border: solid 1px var(--white);
+}
+.tagDiv{
+    display:flex;
+    overflow: hidden; /* when tags are too long it will be cut off*/
+}
+.tagsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* adjust automatically, minimum width 100px & maximum 1fr */
+    gap: 10px;
+}
+
+.third_line{
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 95%;
+
+}
+
+#saveNoteChanges{
+    margin: 10px;
+}
+
+
+
+
+
+/*CSS Animations
+ Change color of application name*/
+#application_name{
+    height: 100px;
+    color: var(--white);
+    animation-name: color-change;
+    animation-duration: 4.5s;
+}
+
+
+@keyframes color-change {
+    0% {color: #ce4c46;}
+    25% {color: #dc8b3b;}
+    50% {color: #70c966;}
+    100% {color: #eee9e4;}
+}
+
+/*Slide-in Animation */
+#noteTitle{
+    animation-duration: 1s;
+    animation-name: slide-in;
+}
+@keyframes slide-in {
+    from {
+        margin-bottom: 30%;
+    }
+    to {
+        margin-bottom: 1.5%;
+    }
+}
+

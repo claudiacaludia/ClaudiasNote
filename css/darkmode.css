@@ -1,0 +1,54 @@
+
+/* -------------toggle dark and light mode------------------------------------------*/
+
+
+#toggle{
+    justify-self: end;
+    margin-top: 25px;
+}
+
+
+#note_detail.dark{
+    background-color: var(--darkgreen);
+    color: white;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggleBtn {
+    background-color: var(--brown);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 18px;
+    width: 48px;
+    transform: scale(1.25);
+}
+
+.ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+/* when toggle is checked, moves ball right or left */
+.checkbox:checked + .toggleBtn .ball {
+    transform: translateX(28px);
+}
+.checkbox:checked + .toggleBtn {
+    background-color: var(--green);
+}
+
+/* code inspiration for toggle: multiple codepen projects*/
